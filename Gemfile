@@ -23,9 +23,16 @@ group :assets do
   gem 'uglifier', '1.2.3'
 end
 
-gem 'jquery-rails', '2.0.0'
+gem 'jquery-rails', '2.0.2'
 
 gem 'heroku'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  #gem 'rspec-rails',   '2.9.0'
+  #gem 'capybara', '1.1.2'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
