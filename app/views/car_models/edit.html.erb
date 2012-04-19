@@ -1,0 +1,19 @@
+<h1>Editing car_model</h1>
+
+<% form_for(@car_model) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </p>
+  <p>
+    <%= f.collection_select(:car_make_id, @car_makes, :id, :name) %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @car_model %> |
+<%= link_to 'Back', car_models_path %>
