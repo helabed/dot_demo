@@ -1,6 +1,16 @@
 DotDemo::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
+  resources :tasks
+
+  resources :users
+
+  resources :car_trims
+
+  resources :car_models
+
+  resources :car_makes
+
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
