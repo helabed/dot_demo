@@ -391,9 +391,15 @@ function InProgressSpinner() {};
 InProgressSpinner.showInProgressImage = function( section_id ) {
   var waitingImage = document.createElement("img");
   waitingImage.setAttribute("src","./images/ajax.gif");
+  var waitingImageDiv = document.createElement("div");
+  waitingImageDiv.setAttribute("style","position: absolute; top: 45%; left: 45%;");
+  waitingImageDiv.appendChild(waitingImage);
+  var container = document.createElement("div");
+  container.setAttribute("style","position: fixed; left: 0; right: 0; top: 0; bottom: 0; background-color: #FFFFFF; -moz-opacity:.80;  filter:alpha(opacity=80); opacity:.80; z-index: 10000000;");
+  container.appendChild(waitingImageDiv);
   var tag_used = document.getElementById(section_id);
-  document.getElementById(section_id).appendChild(waitingImage);
-  return waitingImage;
+  document.getElementById(section_id).appendChild(container);
+  return container;
 }
 
 
