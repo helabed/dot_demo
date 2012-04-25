@@ -395,7 +395,7 @@ InProgressSpinner.showInProgressImage = function( section_id ) {
   waitingImageDiv.setAttribute("style","position: absolute; top: 45%; left: 45%;");
   waitingImageDiv.appendChild(waitingImage);
   var container = document.createElement("div");
-  container.setAttribute("style","position: fixed; left: 0; right: 0; top: 0; bottom: 0; background-color: #FFFFFF; -moz-opacity:.80;  filter:alpha(opacity=80); opacity:.80; z-index: 10000000;");
+  container.setAttribute("style","position: fixed; width; height; left: 0; right: 0; top: 0; bottom: 0; background-color: #FFFFFF; -moz-opacity:.80;  filter:alpha(opacity=80); opacity:.80; z-index: 10000000;");
   container.appendChild(waitingImageDiv);
   var tag_used = document.getElementById(section_id);
   document.getElementById(section_id).appendChild(container);
